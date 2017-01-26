@@ -42,7 +42,7 @@ group :development, :test do
   # Test environment
   gem 'rspec-rails', '~> 3.5'
   # Easier testing with factorygirl
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   # Minimalist matcher for validation BDD
   gem 'valid_attribute'
   # Easier syntax in testing validations (shoulda_matchers + shoulda_context)
