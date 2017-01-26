@@ -13,10 +13,12 @@ feature 'user registers', %Q{
 #   an error message
 
   scenario 'provide valid registration information' do
-    visit new_user_registration_path
+    visit root_path
+    click_link "Sign Up"
     within('#new-user') do
       fill_in 'First Name', with: 'Jeff'
       fill_in 'Last Name', with: 'Sampson'
+      fill_in 'Username', with: 'Swansonite11'
       fill_in 'Email', with: 'jeffsampson@example.com'
       fill_in 'user_password', with: 'password'
       fill_in 'Password Confirmation', with: 'password'
@@ -34,6 +36,7 @@ feature 'user registers', %Q{
     end
     expect(page).to have_content("First name can't be blank")
     expect(page).to have_content("Last name can't be blank")
+    expect(page).to have_content("Username name can't be blank")
     expect(page).to have_content("Email can't be blank")
     expect(page).to have_content("Password can't be blank")
     expect(page).to_not have_content('Sign Out')
