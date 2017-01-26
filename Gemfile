@@ -33,9 +33,24 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Simpler form-making
+gem 'simple_form'
+# Devise User Authentication
+gem 'devise'
+
 group :development, :test do
+  # Test environment
   gem 'rspec-rails', '~> 3.5'
+  # Easier testing with factorygirl
+  gem 'factory_girl'
+  # Minimalist matcher for validation BDD
+  gem 'valid_attribute'
+  # Easier syntax in testing validations (shoulda_matchers + shoulda_context)
+  gem 'shoulda'
+  # Capybara - Acceptence test framework
   gem 'capybara'
+
+  # pry debugging
   gem 'pry-rails'
 end
 
