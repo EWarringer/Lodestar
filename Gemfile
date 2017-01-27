@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 # Devise User Authentication
 gem 'devise'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   # Test environment
