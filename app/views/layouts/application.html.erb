@@ -9,18 +9,17 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <%- if user_signed_in? -%>
-          <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign in', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </nav>
-    <p class="notice"><%= notice%></p>
-    <p class="alert"><%= alert%></p>
+    <%= render partial: "shared/nav" %>
+
+    <div class="flash-messages">
+      <%- flash.each do |key, value| -%>
+        <div class="flash flash-<%= key %>">
+          <%= value %>
+        </div>
+      <%- end -%>
+    </div>
+    <!-- <p class="notice"><%= notice%></p>
+    <p class="alert"><%= alert%></p> -->
 
     <%= yield %>
   </body>
