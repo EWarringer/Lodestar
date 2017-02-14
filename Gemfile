@@ -40,6 +40,9 @@ gem 'simple_form'
 gem 'devise'
 gem 'autoprefixer-rails'
 
+# GetShitDone bootstrap package
+gem 'gsdk', '~> 1.0', '>= 1.0.0.4'
+
 group :development, :test do
   # Test environment
   gem 'rspec-rails', '~> 3.5'
@@ -54,6 +57,8 @@ group :development, :test do
 
   # pry debugging
   gem 'pry-rails'
+
+  gem 'launchy'
 end
 
 group :development do
